@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>JQPhp Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A PHP Library For Performing Simple Javascripts">
+    <meta name="author" content="Samuel Adeshina Shalom">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+    	padding-top: 60px;
+    	padding-bottom: 40px;
+    }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    </head>
+    
+<body data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container"> 
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+	<a class="brand" href="#">JQPhp</a> <!-- TIP: Change this for the name of your file -->
+     	<div class="nav-collapse">
+        <ul class="nav">
+              <li><a href="#top" class="active">Home</a></li>
+              <li><a href="#markup">Example</a></li>
+              <li><a href="#styles">Namespaces</a></li>
+              <li><a href="#javascript">The JQPhp Namespace</a></li>
+              <li><a href="#credits">Contact Me</a></li>
+          </ul>
+</div>
+	</div>
+		</div>
+			</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->			
+			
+<div class="container">
+    
+	<div class="masthead">
+	    <h1>JQPhp Documentation</h1>
+	    <p class="marketing-byline">A Library For Performing Javascripts Calls Directly In PHP, Crafted with &hearts; by <a href="">Samuel</a> <a href="">Adeshina</a></p>
+	    <p>JQPhp is a simple and very flexible PHP library that can be used to quickly perform simple javascript calls directly via PHP.</p>
+	    <p class="download-info"> <a href="#" class="btn btn-primary btn-large">Download</a> <a href="#" class="btn btn-large">Clone Via GitHub</a> </p>
+	</div> <!-- masthead -->
+ 	
+   <div id="intro">
+    <p class="highlight hero-unit">Tired of having to include the boring <small>&lt;script&gt;&lt;/script&gt;</small> tags in the middle of your codes just because you want to do something simple such as displaying an alert or toggling the visibility of an html element?</p>
+  </div>
+<section id="markup">
+    <div class="alert"><strong> Let's display a javascript alert in jquery</strong></div>\
+
+    <div class="row">
+      <div class="span3">
+        <h3>Javascript</h3>
+      </div>
+
+<div class="span9">
+<pre class="prettyprint linenums:304">
+  &lt;script&gt;<br/>
+  &nbsp;$(document).ready(function(){
+  &nbsp;&nbsp;alert("This is an alert in javascript");
+  &nbsp;});
+  &lt;/script&gt;
+</pre>
+      </div>
+        </div>
+
+    <hr />
+    <div class="alert alert-success"><strong> It's now possible to do the same thing in PHP. This time around, it's become very easy!</strong></div>
+
+<div class="row">
+    <div class="span3">
+  <h3>PHP</h3>
+  <p></p>
+</div>
+
+<div class="span9">
+<pre class="prettyprint linenums:304">
+  $jqphp-&gt;Alert("This is an alert in PHP");
+</pre>
+      </div>
+        </div>
+
+    <hr />
+  </section> <!-- Markup -->
+    
+
+ <div class="alert alert-info"><h3> With this library, you can perform common javascript operations such as modifying the css definitions of html elements, performing client side redirections, toggling the visibility of elements, animating html elements and so on without ever having to type the script tags again! </h3></div>
+
+<section id="styles">
+    <div class="page-header">
+       <h1>Available Namespaces</h1>
+     </div>
+
+
+<div class="row">
+    <div class="span3">
+  <h3>Namespacing</h3>
+  <p>The <code>JQPhp</code> library is made of classes which are categorized into various namespaces depending on their functionality or scope.</p>
+</div>
+<div class="span9">
+        <table class="table table-bordered table-striped">
+              <thead>
+            <tr>
+                  <th>Namespace</th>
+                  <th>Location</th>
+                  <th>Description</th>
+                </tr>
+          </thead>
+              <tbody>
+            <tr>
+                  <td><code>JQPhp</code></td>
+                  <td><code>JQPhp.php</code></td>
+                  <td>This is the base namespace and is made up of class objects that are shared among the classes of other namespaces</td>
+                </tr>
+            <tr>
+                  <td><code>JQPhp\Selector</code></td>
+                  <td>undefined</td>
+                  <td>Contains class objects that are shared amongst the classes of every other child namespace such as <code>JQPhp\Selector\Attributes</code></td>
+                </tr>
+            <tr>
+                  <td><code>JQPhp\Shared</code></td>
+                  <td><code>shared.php</code></td>
+                  <td>Contains objects that are required by the classes of the <code>JQPhp\Selector</code> namespace</td>
+                </tr>
+                <tr>
+                  <td><code>JQPhp\Selector\Attributes</code></td>
+                  <td><code>JQPhp.Selector.Attributes.php</code></td>
+                  <td>Contains classes that impersonates the attribute selectors as the prefix, has, contains, startswith selectors in jquery.</td>
+                </tr>
+                <tr>
+                  <td><code>JQPhp\Selector\Basics</code></td>
+                  <td><code>JQPhp.Selector.Basics.php</code></td>
+                  <td>the #ID, .Class, "*" (ALL) selectors are all basic selectors in jquery. This namespace contains classes that implements these selectors in PHP </td>
+                </tr>
+                <tr>
+                  <td><code>JQPhp\Selector\Filters</code></td>
+                  <td><code>JQPhp.Selector.Filters.php</code></td>
+                  <td>this namespace contains classes that implements the filter selectors such as :odd, :header, :even and so on in PHP.  </td>
+                </tr>
+          </tbody>
+            </table>
+      </div>
+        </div>
+    <hr />
+      <!-- Styles -->
+      
+      <section id="javascript">
+	<div class="page-header">
+	  <h1>The JQPhp Namespace </h1>
+	</div>
+	<div class="row">
+	  <div class="span3">
+	    <h3>Enable</h3>
+	    <p>You can enable javascript by providing a valid url or file path location to either the minified or unminified jquery library in the constructor of this class</p>
+	  </div>
+	  <div class="span9">
+	   <pre class="prettyprint php linenums:103">
+      /* ---------- Enabling Javascript directing via PHP -----------*/
+        new JQPhp\Enable("path-to-jquerys-cdn-or-file-path-location.js");
+      </pre>
+	  </div>
+	</div>
+	<hr />
+	<div class="row">
+	<div class="span3">
+	  <h3>Alert</h3>
+	  <p>This class emulates the javascript <code>alert()</code> object.</p>
+	</div>
+<div class="span9">
+<pre class="prettyprint php linenums:105">
+/* ---------- Showing An Alert -----------*/
+  new JQPhp\Alert("Click The Cancel Button To Close This Alert");
+</pre>
+      </div>
+        </div>
+  </section><!-- JavaScript -->
+
+
+      
+    <section id="">
+  <div class="page-header">
+    <h1>The JQPhp\Selector\Attributes Namespace </h1>
+  </div>
+  <div class="row">
+    <div class="span3">
+      <h3>Prefix</h3>
+      <p>This class can be used to select every element that has an attribute that contains a particular value</p>
+    </div>
+    <div class="span9">
+     <pre class="prettyprint php linenums:106">
+        $prefix = new JQPhp\Prefix("a", "href", "#", new JQPhp\jquery());
+
+      /* The example above selects all <code>"a"</code> element where their <code>"href"</code> attributes are equivalent to <code>"#"</code> */<br/>
+      /* the example below selects all "div" elements where the "id" attribute is equal to "projector" */
+      $prefix2 = new JQPhp\Prefix("div", "id", "projector", new JQPhp\jquery());
+      </pre>
+    </div>
+  </div>
+  <hr />
+  <div id="intro">
+    <p class="highlight hero-unit">This class and every other classes in the <code>JQPhp\Selector\Attributes Namespace</code> contains three methods for changing the element, attribute or value that are declared in the constructor. The methods are: <code>setElement($value)</code>, <code>setAttribute($value)</code>, <code>setValue($value)</code>.<br/>Other classes in this namespace includes
+        <code>StartsWith</code>
+        <code>Has</code>
+        <code>Contains</code>
+        <code>Equals</code>
+        <code>EndsWith</code>
+        <code>NotEqual</code> and they can all be instantiated the same way the Prefix class is instantiated
+      </p>
+  </div>
+  </section><!-- JavaScript -->
+	<section id="credits">
+	  <div class="page-header">
+	    <h1>Help? Questions? Suggestions? <small>You can always reach me via one of the links below</small></h1>
+	  </div>
+	  <ol>
+	    <li>Email <small>&mdash; samueladeshina73@gmail.com (samueladeshina73 at gmail dot com) </small></li>
+	    <li>Facebook <small>&mdash; <a href='https://www.facebook.com/samuel.adeshina.779'>https://www.facebook.com/samuel.adeshina.779</a> </small></li>
+      <li>Twitter <small>&mdash; <a href='https://twitter.com/SamuelAdeshina6'>https://twitter.com/SamuelAdeshina6</a> </small></li>
+      <li>GitHub <small>&mdash; <a href='https://github.com/Samshal'>https://github.com/Samshal</a> </small></li>
+      <li>Google+ <small>&mdash; <a href='https://plus.google.com/+SamuelAdeshina73'>https://plus.google.com/+SamuelAdeshina73</a> </small></li>
+      <li>LinkedIn <small>&mdash; <a href=''></a> </small></li>
+	  </ol>
+	</section><!-- Credits -->
+      <hr />
+
+      <div class="goodbye">
+    <p>Thanks for checking out this package. Once again, I'ld love any feedbacks from you guys. I'm open to criticisms, suggestions and ready to answer your questions.</p>
+  </div>
+
+<footer>
+    <p>&copy; Samuel Adeshina 2015</p>
+</footer>
+
+</div><!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-transition.js"></script> 
+<script src="assets/js/bootstrap-alert.js"></script> 
+<script src="assets/js/bootstrap-modal.js"></script> 
+<script src="assets/js/bootstrap-dropdown.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script> 
+<script src="assets/js/bootstrap-tab.js"></script> 
+<script src="assets/js/bootstrap-tooltip.js"></script> 
+<script src="assets/js/bootstrap-popover.js"></script> 
+<script src="assets/js/bootstrap-button.js"></script> 
+<script src="assets/js/bootstrap-collapse.js"></script>
+</body>
+</html>
